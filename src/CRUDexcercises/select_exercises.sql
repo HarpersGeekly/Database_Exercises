@@ -10,7 +10,7 @@ SELECT release_date from albums where artist = 'The Beatles';
 SELECT genre from albums where name = 'Nevermind';
 # The genre for Nevermind
 
-SELECT name from albums where release_date >= 1990;
+SELECT name from albums where release_date like ('%199%');
 # Which albums were released in the 1990s
 
 SELECT name from albums where sales < 20000000;
