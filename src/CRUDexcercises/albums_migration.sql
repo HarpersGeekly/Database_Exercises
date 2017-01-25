@@ -5,8 +5,8 @@ DROP TABLE IF EXISTS albums;
 CREATE TABLE albums (
 id INT unsigned AUTO_INCREMENT primary key,
 artist VARCHAR(256) NOT NULL,
-name VARCHAR(256) NOT NULL ,
-release_date YEAR NOT NULL ,
+name VARCHAR(256) NOT NULL,
+release_date INT unsigned NOT NULL,
 sales FLOAT NOT NULL,
 genre VARCHAR(256) NOT NULL
 );
