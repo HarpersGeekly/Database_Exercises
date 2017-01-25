@@ -47,18 +47,19 @@ select * from employees where first_name IN ('Irena', 'Vidya', 'Maya') ORDER BY 
 
 # Update the query to order by first name and then last name. The first result should now be Irena Acton and the last
 # should be Vidya Zweizig.
-select * from employees where first_name IN ('Irena', 'Vidya', 'Maya') ORDER BY first_name ASC, last_name ASC;
+select * from employees where first_name IN ('Irena', 'Vidya', 'Maya') ORDER BY first_name, last_name;
 
 # Change the order by clause so that you order by last name before first name. Your first result should still be Irena
 # Acton but now the last result should be Maya Zyda.
-select * from employees where first_name IN ('Irena', 'Vidya', 'Maya') ORDER BY last_name ASC, first_name ASC;
+select * from employees where first_name IN ('Irena', 'Vidya', 'Maya') ORDER BY last_name, first_name;
 
 # Update your queries for employees with 'E' in their last name to sort the results by their employee number. Your
 # results should not change!
-select * from employees where last_name like 'E%' ORDER BY emp_no;
+select * from employees where last_name like '%E%' ORDER BY emp_no;
+# select * from employees where last_name like 'e%e' ORDER BY emp_no;
 
 # Now reverse the sort order for both queries.
-select * from employees where last_name like 'E%' ORDER BY emp_no desc;
+select * from employees where last_name like '%E%' ORDER BY emp_no desc;
 
 # Change the query for employees hired in the 90s and born on Christmas such that the first result is the oldest
 # employee who was hired last. It should be Khun Bernini.
